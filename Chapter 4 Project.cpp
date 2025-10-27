@@ -4,6 +4,8 @@
 
 #include <iostream> 
 #include <iomanip>
+#include <cmath>
+
 using namespace std;
 
 int main()
@@ -43,7 +45,7 @@ int main()
 		cost = 4.80;
 	}
 	
-	double totalCost = (distance / 500) * cost;
+	double totalCost = cost * ceil(distance / 500);
 	cout << fixed << setprecision(2);
 	cout << "The shipping cost is: $" << totalCost << endl;
 	return 0;
